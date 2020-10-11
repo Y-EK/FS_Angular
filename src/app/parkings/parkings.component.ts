@@ -14,7 +14,11 @@ export class ParkingsComponent implements OnInit {
   constructor(private parkingService: ParkingService) { }
 
   ngOnInit(): void {
-    this.parkings = this.parkingService.getParkings();
+    this.parkingService.getParkings().subscribe(
+      reponse => {
+        this.parkings = reponse;
+      }
+    );
   }
 
 }
