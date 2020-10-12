@@ -10,6 +10,7 @@ import { ParkingService } from '../parking.service';
 export class ParkingsComponent implements OnInit {
 
   parkings: ParkingInfo[];
+  isLoaded: boolean = false;
 
   constructor(private parkingService: ParkingService) { }
 
@@ -17,6 +18,7 @@ export class ParkingsComponent implements OnInit {
     this.parkingService.getParkings().subscribe(
       reponse => {
         this.parkings = reponse;
+        this.isLoaded = true;
       }
     );
   }
