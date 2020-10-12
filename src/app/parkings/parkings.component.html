@@ -1,3 +1,5 @@
+<mat-spinner></mat-spinner>
+
 <mat-card *ngFor = "let parking of parkings" class="parking-card"> 
     <span style="font-weight: bold;"> Nom : {{parking.nom}} </span> 
     <span style="float: right" [ngStyle]="calculStyleStatut(parking)"> Statut : {{parking.statut}} </span>
