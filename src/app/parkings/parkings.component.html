@@ -1,8 +1,7 @@
-<p>parkings works!</p>
-<div *ngFor = "let parking of parkings"> 
+<mat-card *ngFor = "let parking of parkings"> 
     <div> Nom : {{parking.nom}} </div>
     <div> Nombre de places disponibles : {{parking.nbPlacesDispo}} </div>
     <div> Nombre de places total : {{parking.nbPlacesTotal}} </div>
     <div> Statut : {{parking.statut}} </div>
     <div> Date de mise à jour : {{parking.heureMaj}} </div>
-</div>
+</mat-card>
