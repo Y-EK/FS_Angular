@@ -1,7 +1,5 @@
 <mat-card *ngFor = "let parking of parkings" class="parking-card"> 
-    <div> Nom : {{parking.nom}} </div>
-    <div> Nombre de places disponibles : {{parking.nbPlacesDispo}} </div>
-    <div> Nombre de places total : {{parking.nbPlacesTotal}} </div>
-    <div> Statut : {{parking.statut}} </div>
-    <div> Date de mise à jour : {{parking.heureMaj}} </div>
+    <span style="font-weight: bold;"> Nom : {{parking.nom}} </span> <span style="float: right"> Statut : {{parking.statut}} </span>
+    <p></p>
+    <span> Places disponibles : {{parking.nbPlacesDispo}} </span>
 </mat-card>
