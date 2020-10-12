@@ -1,5 +1,5 @@
 <mat-card *ngFor = "let parking of parkings" class="parking-card"> 
     <span style="font-weight: bold;"> Nom : {{parking.nom}} </span> <span style="float: right"> Statut : {{parking.statut}} </span>
     <p></p>
-    <span> Places disponibles : {{parking.nbPlacesDispo}} </span>
+    <span *ngIf="parking.statut !== 'Données non disponibles'"> Places disponibles : {{parking.nbPlacesDispo}} </span>
 </mat-card>
