@@ -1,6 +1,6 @@
 <mat-spinner style="margin: 0 auto;" color="accent" diameter="30" *ngIf="!isLoaded"></mat-spinner>
 
-<mat-card *ngFor = "let parking of parkings" class="parking-card"> 
+<mat-card *ngFor = "let parking of parkings" class="parking-card" [routerLink]="['/parking', parking.identifiant]"> 
     <span style="font-weight: bold;"> Nom : {{parking.nom}} </span> 
     <span style="float: right" [ngStyle]="calculStyleStatut(parking)"> Statut : {{parking.statut}} </span>
     <p></p>
