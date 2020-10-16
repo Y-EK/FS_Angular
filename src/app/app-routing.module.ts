@@ -4,7 +4,8 @@ import { ParkingsComponent } from './parkings/parkings.component';
 
 
 const appRoutes: Routes = [
-  { path: 'parkings', component: ParkingsComponent }
+  { path: 'parkings', component: ParkingsComponent },
+  { path: '**', redirectTo: "/parkings"}
 ];
 
 @NgModule({
